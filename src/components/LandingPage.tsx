@@ -25,9 +25,9 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#FAFAFA]">
       <Hero scrollToProjects={scrollToProjects} showScroll={showScroll} />
-      {/* <div ref={projectsRef}> */}
-        <Projects />
-      {/* </div> */}
+      
+      <Projects />
+      
       <Journey/>
       
     </div>
