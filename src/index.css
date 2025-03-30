@@ -1,5 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+/* Base styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+  margin: 0
+}
+
+/* Quicksand font styles */
+.quicksand-font {
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.cormorant-font {
+  font-family: 'Cormorant Garamond', serif;
+  letter-spacing: 0.02em;
+}
+
+/* Animation for floating elements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-delay-1 {
+  animation-delay: 1s;
+}
+
+.float-delay-2 {
+  animation-delay: 2s;
+}
+
+.float-delay-3 {
+  animation-delay: 3s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  
+
+  body {
+    font-family: 'Quicksand', sans-serif;
+  color: white; /* 👈 force white as base text */
+  overflow-x: hidden;
+  }
+
+  h1, h2, h3, .quicksand-font {
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  /* Colorful links */
+  /* a {
+    @apply transition-colors duration-300;
+  } */
+
+  /* Custom scrollbar for a whimsical feel */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #276a44; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #71A0A5; 
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4A6274; 
+  }
+
+  /* Soft shadows for cards */
+  .card-shadow {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Soft borders */
+  /* .soft-border {
+    @apply rounded-xl border border-gray-100;
+  } */
+}

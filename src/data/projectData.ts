@@ -36,7 +36,7 @@ export const projectData = [
     id: "lifegram",
     title: "Lifegram",
     imageSrc: chairImg,
-    shortDescription: "A pixel-perfect Instagram clone with React as the frontend design and Rails as the backend server for people who enjoy sharing their life snippets.",
+    shortDescription: "An Instagram clone with React as the frontend design and Rails as the backend server for people who enjoy sharing their life snippets.",
     description: "Lifegram is a full-stack Instagram clone that implements core social media features. The platform allows users to create accounts, share photos, follow other users, and interact with content through likes and comments.",
     challenge: "Building a responsive, scalable application with a smooth user experience while handling image uploads, user authentication, and real-time interactions.",
     solution: "I developed a robust architecture using React for the frontend and Ruby on Rails for the backend, with AWS S3 for image storage. The application uses Redux for state management to create a seamless user experience with optimistic UI updates.",
