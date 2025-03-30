@@ -205,10 +205,10 @@ export default function LandingPage() {
             transition={{ duration: 1 }}
             className="text-center"
           >
-            <h1 className="quicksand-font text-5xl md:text-6xl font-semibold text-white drop-shadow-lg mb-4">
+            <h1 className="font-quicksand text-5xl md:text-6xl font-semibold text-white drop-shadow-lg mb-4">
               Jean Yang
             </h1>
-            <p className="quicksand-font mt-4 text-xl md:text-2xl text-white drop-shadow-md mb-10">
+            <p className="font-quicksand mt-4 text-xl md:text-2xl text-white drop-shadow-md mb-10">
               built with love, cursed by scope creep
             </p>
 
@@ -222,7 +222,7 @@ export default function LandingPage() {
                 onClick={scrollToProjects}
               >
                 <div className="flex flex-col items-center">
-                  <p className="quicksand-font text-white mb-2">
+                  <p className="font-quicksand text-white mb-2">
                     Scroll to explore
                   </p>
                   <ArrowDown className="text-white" size={24} />
@@ -253,7 +253,7 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="w-full max-w-6xl mx-auto relative z-10 flex flex-col justify-center h-auto"
         >
-          <h2 className="quicksand-font text-3xl md:text-4xl font-semibold text-white text-center mb-8 md:mb-10 drop-shadow-lg">
+          <h2 className="font-quicksand text-3xl md:text-4xl font-semibold text-white text-center mb-8 md:mb-10 drop-shadow-lg">
             My Projects
           </h2>
 
@@ -305,7 +305,7 @@ export default function LandingPage() {
                   viewport={{ once: true }}
                 >
                   <motion.h3
-                    className="quicksand-font text-xl font-semibold text-[#3C7A55] mb-3 text-center"
+                    className="font-quicksand text-xl font-semibold text-[#3C7A55] mb-3 text-center"
                     initial={{ opacity: 0, y: -10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
@@ -425,7 +425,7 @@ export default function LandingPage() {
         {/* Container for timeline line, title, and events */}
         <div className="relative w-full max-w-5xl mx-auto z-10">
           {/* "My Journey" Title placed on top of the timeline container */}
-          <h2 className="quicksand-font text-3xl md:text-4xl font-semibold text-white text-center drop-shadow-lg absolute left-1/2 top-0 transform -translate-x-1/2 z-20">
+          <h2 className="font-quicksand text-3xl md:text-4xl font-semibold text-white text-center drop-shadow-lg absolute left-1/2 top-0 transform -translate-x-1/2 z-20">
             My Journey
           </h2>
 
@@ -481,10 +481,10 @@ export default function LandingPage() {
                     whileHover={{ scale: 1.03 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h3 className="quicksand-font text-[#3C7A55] font-semibold text-lg">
+                    <h3 className="font-quicksand text-[#3C7A55] font-semibold text-lg">
                       {event.title}
                     </h3>
-                    <p className="quicksand-font text-gray-800 text-sm">
+                    <p className="font-quicksand text-gray-800 text-sm">
                       {event.description}
                     </p>
                   </motion.div>
@@ -499,10 +499,10 @@ export default function LandingPage() {
                       whileHover={{ scale: 1.03 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <h3 className="quicksand-font text-[#3C7A55] font-semibold text-lg">
+                      <h3 className="font-quicksand text-[#3C7A55] font-semibold text-lg">
                         {event.title}
                       </h3>
-                      <p className="quicksand-font text-gray-800">
+                      <p className="font-quicksand text-gray-800">
                         {event.description}
                       </p>
                     </motion.div>
@@ -515,10 +515,10 @@ export default function LandingPage() {
                       whileHover={{ scale: 1.03 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <h3 className="quicksand-font text-[#3C7A55] font-semibold text-lg">
+                      <h3 className="font-quicksand text-[#3C7A55] font-semibold text-lg">
                         {event.title}
                       </h3>
-                      <p className="quicksand-font text-gray-800">
+                      <p className="font-quicksand text-gray-800">
                         {event.description}
                       </p>
                     </motion.div>
@@ -550,7 +550,7 @@ export default function LandingPage() {
           viewport={{ once: true }}
           className="w-full max-w-4xl mx-auto relative z-10 flex flex-col justify-center items-center"
         >
-          <h2 className="quicksand-font text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-lg">
+          <h2 className="font-quicksand text-3xl md:text-4xl font-bold text-white text-center mb-8 md:mb-12 drop-shadow-lg">
             Get In Touch
           </h2>
 
@@ -570,8 +570,8 @@ export default function LandingPage() {
               <div className="bg-transparent p-4 rounded-full mb-4 group-hover:bg-blue-200 transition-all duration-35 w-29 h-29 flex items-center justify-center">
                 <img src={githubImage} alt="GitHub" className="w-full h-full object-contain" />
               </div>
-              <h3 className="quicksand-font text-xl font-semibold text-white mb-2">GitHub</h3>
-              <p className="quicksand-font text-white/90 text-sm">jeanyang0519</p>
+              <h3 className="font-quicksand text-xl font-semibold text-white mb-2">GitHub</h3>
+              <p className="font-quicksand text-white/90 text-sm">jeanyang0519</p>
             </motion.a>
 
 
@@ -591,8 +591,8 @@ export default function LandingPage() {
               <div className="bg-transparent p-4 rounded-full mb-4 group-hover:bg-blue-200 transition-all duration-35 w-29 h-29 flex items-center justify-center">
                 <img src={linkedInImage} alt="LinkedIn" className="w-full h-full object-contain" />
               </div>
-              <h3 className="quicksand-font text-xl font-semibold text-white mb-2">LinkedIn</h3>
-              <p className="quicksand-font text-white/90 text-sm">jeanyang-engineer</p>
+              <h3 className="font-quicksand text-xl font-semibold text-white mb-2">LinkedIn</h3>
+              <p className="font-quicksand text-white/90 text-sm">jeanyang-engineer</p>
             </motion.a>
 
             {/* Email */}
@@ -608,8 +608,8 @@ export default function LandingPage() {
               <div className="bg-transparent p-4 rounded-full mb-4 group-hover:bg-blue-200 transition-all duration-35 w-29 h-29 flex items-center justify-center">
                 <img src={emailImage} alt="Email" className="w-full h-full object-contain" />
               </div>
-              <h3 className="quicksand-font text-xl font-semibold text-white mb-2">Email</h3>
-              <p className="quicksand-font text-white/90 text-sm">jeanyang0519@gmail.com</p>
+              <h3 className="font-quicksand text-xl font-semibold text-white mb-2">Email</h3>
+              <p className="font-quicksand text-white/90 text-sm">jeanyang0519@gmail.com</p>
             </motion.a>
           </div>
 
@@ -620,7 +620,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5, delay: 0.7 }}
             viewport={{ once: true }}
           >
-            <p className="quicksand-font text-white text-lg">
+            <p className="font-quicksand text-white text-lg">
               Excited to connect in this vast chaos we call the internet
             </p>
           </motion.div>
