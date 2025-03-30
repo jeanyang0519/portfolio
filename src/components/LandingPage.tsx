@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
+import Journey from "./sections/Journey";
 
 
 export default function LandingPage() {
@@ -27,6 +28,7 @@ export default function LandingPage() {
       {/* <div ref={projectsRef}> */}
         <Projects />
       {/* </div> */}
+      <Journey/>
       
     </div>
   );
