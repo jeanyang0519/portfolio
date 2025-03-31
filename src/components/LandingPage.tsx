@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
-import Hero from '@/components/sections/Hero';
-import Projects from '@/components/sections/Projects';
+import Hero from './sections/Hero';
+import Projects from './sections/Projects';
 import Journey from './sections/Journey';
+import Contact from './sections/Contact';
 
 export default function LandingPage() {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,7 @@ export default function LandingPage() {
       </div>
 
       <Journey />
+      <Contact />
     </div>
   );
 }
