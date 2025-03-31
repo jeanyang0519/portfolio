@@ -15,7 +15,7 @@ export default function Projects() {
       {/* Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Title */}
-        <h2 className="text-white text-4xl  text-center mb-12 drop-shadow-lg">My Projects</h2>
+        <h2 className="text-white text-4xl  text-center mb-12 font-semibold drop-shadow-lg">My Projects</h2>
 
         {/* Projects Grid */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-40">
@@ -26,7 +26,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/60 hover:bg-white/85 rounded-xl shadow-lg p-6 flex flex-col justify-between"
+              className="bg-white/70 hover:bg-white/90 rounded-xl shadow-lg p-6 flex flex-col justify-between"
             >
               <img
                 src={project.imageSrc}
@@ -38,7 +38,7 @@ export default function Projects() {
                 {project.title}
               </h3>
 
-              <p className="text-sm text-gray-800 mb-4 leading-relaxed text-left">
+              <p className="text-base text-gray-800 mb-4 leading-relaxed text-left">
                 {project.shortDescription}
               </p>
 

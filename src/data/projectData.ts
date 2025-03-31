@@ -51,11 +51,11 @@ export const projectData = [
     technologies: [
       'React',
       'Redux',
+      'PostgreSQL',
       'JavaScript',
       'Ruby',
       'Rails',
       'AWS S3',
-      'PostgreSQL',
       'Responsive Design',
     ],
     features: [
@@ -93,10 +93,10 @@ export const projectData = [
       'I built a MERN stack application with Redux for state management and implemented a real-time chat system. The matching algorithm considers multiple factors including skills, interests, goals, and availability to suggest optimal mentor-mentee pairings.',
     technologies: [
       'React',
-      'Redux',
-      'Node.js',
-      'Express',
       'MongoDB',
+      'Node.js',
+      'Redux',
+      'Express',
       'WebSockets',
       'JWT Authentication',
       'Responsive Design',
