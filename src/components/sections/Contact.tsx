@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import sunsetImage from '../../assets/contact/contact.png';
+import sunsetImage from '../../assets/contact/goldenhour.png';
 import githubImage from '../../assets/contact/github.png';
 import linkedInImage from '../../assets/contact/linkedIn.png';
 import emailImage from '../../assets/contact/email.png';
@@ -30,7 +30,7 @@ export default function Contact() {
             href="https://github.com/jeanyang0519"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/20 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-white hover:bg-white/30 transition-all group"
+            className="  rounded-xl p-6 flex flex-col items-center text-white hover:bg-white/30 transition-all group"
             whileHover={{ y: -5 }}
           >
             <img src={githubImage} alt="GitHub" className="w-16 h-16 object-contain mb-4" />
@@ -43,7 +43,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/jeanyang-engineer"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/20 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-white hover:bg-white/30 transition-all group"
+            className="rounded-xl p-6 flex flex-col items-center text-white hover:bg-white/30 transition-all group"
             whileHover={{ y: -5 }}
           >
             <img src={linkedInImage} alt="LinkedIn" className="w-16 h-16 object-contain mb-4" />
@@ -54,7 +54,7 @@ export default function Contact() {
           {/* Email */}
           <motion.a
             href="mailto:jeanyang0519@gmail.com"
-            className="bg-white/20 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-white hover:bg-white/30 transition-all group"
+            className=" rounded-xl p-6 flex flex-col items-center text-white hover:bg-white/30 transition-all group"
             whileHover={{ y: -5 }}
           >
             <img src={emailImage} alt="Email" className="w-16 h-16 object-contain mb-4" />
