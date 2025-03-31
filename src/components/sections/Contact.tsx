@@ -1,14 +1,17 @@
-import { motion } from "framer-motion";
-import sunsetImage from "../../assets/contact/contact.png";
-import githubImage from "../../assets/contact/github.png";
-import linkedInImage from "../../assets/contact/linkedIn.png";
-import emailImage from "../../assets/contact/email.png";
+import { motion } from 'framer-motion';
+import sunsetImage from '../../assets/contact/contact.png';
+import githubImage from '../../assets/contact/github.png';
+import linkedInImage from '../../assets/contact/linkedIn.png';
+import emailImage from '../../assets/contact/email.png';
 
 export default function Contact() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center px-4 py-16 overflow-hidden bg-cover bg-center" style={{ backgroundImage: `url(${sunsetImage})` }}>
+    <div
+      className="relative min-h-screen flex items-center justify-center px-4 py-16 overflow-hidden bg-cover bg-center"
+      style={{ backgroundImage: `url(${sunsetImage})` }}
+    >
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-0"></div>
+      <div className="absolute inset-0 bg-black/30  z-0"></div>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -17,7 +20,9 @@ export default function Contact() {
         viewport={{ once: true }}
         className="relative z-10 w-full max-w-5xl mx-auto text-center"
       >
-        <h2 className="text-white text-3xl md:text-4xl font-bold mb-12 quicksand-font drop-shadow-lg">Get In Touch</h2>
+        <h2 className="text-white text-3xl md:text-4xl mb-12 quicksand-font drop-shadow-lg">
+          Get In Touch
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* GitHub */}
@@ -64,7 +69,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
-          Excited to connect in this vast chaos we call the internet 🌐✨
+          Excited to connect in this vast chaos we call the internet
         </motion.p>
       </motion.div>
     </div>

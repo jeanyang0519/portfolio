@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
-
+@import 'tailwindcss';
 
 /* Base styles */
 body {
@@ -65,16 +64,16 @@ html {
     @apply font-sans antialiased bg-background text-foreground;
   } */
 
-  h1, h2, h3, .quicksand-font {
+  h1,
+  h2,
+  h3,
+  .quicksand-font {
     font-family: 'Quicksand', sans-serif;
+    letter-spacing: 0.05em;
   }
 
-
-  
   /* Soft shadows for cards */
   .card-shadow {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
   }
-  
-  
 }

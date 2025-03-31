@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import landscape from '../../assets/landscape.png';
 import { ArrowDown } from 'lucide-react';
-import './Hero.css';
 
 interface HeroProps {
   scrollToProjects: () => void;
