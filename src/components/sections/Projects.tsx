@@ -1,15 +1,11 @@
-import "../sections/Project.css";
-import { projectData } from "@/data/projectData";
-import oceanImage from "../../assets/ocean.png";
+import '../sections/Project.css';
+import { projectData } from '@/data/projectData';
+import oceanImage from '../../assets/ocean.png';
 
 export default function Projects() {
   return (
     <section className="projects-section">
-      <img
-        src={oceanImage}
-        alt="Ocean background"
-        className="projects-background"
-      />
+      <img src={oceanImage} alt="Ocean background" className="projects-background" />
 
       <div className="projects-content">
         {/* Title on top */}
@@ -19,11 +15,7 @@ export default function Projects() {
         <div className="projects-container">
           {projectData.map((project) => (
             <div className="project-card" key={project.id}>
-              <img
-                src={project.imageSrc}
-                alt={project.title}
-                className="project-image"
-              />
+              <img src={project.imageSrc} alt={project.title} className="project-image" />
               <h3 className="project-title-card">{project.title}</h3>
               <p className="project-description">{project.shortDescription}</p>
               <div className="tech-badges">
@@ -33,9 +25,7 @@ export default function Projects() {
                   </span>
                 ))}
                 {project.technologies.length > 3 && (
-                  <span className="tech-badge">
-                    +{project.technologies.length - 3}
-                  </span>
+                  <span className="tech-badge">+{project.technologies.length - 3}</span>
                 )}
               </div>
               <div className="project-links">

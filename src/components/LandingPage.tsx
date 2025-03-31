@@ -1,14 +1,14 @@
-import { useState, useRef, useEffect } from "react";
-import Hero from "@/components/sections/Hero";
-import Projects from "@/components/sections/Projects";
-import Journey from "./sections/Journey";
+import { useState, useRef, useEffect } from 'react';
+import Hero from '@/components/sections/Hero';
+import Projects from '@/components/sections/Projects';
+import Journey from './sections/Journey';
 
 export default function LandingPage() {
   const projectsRef = useRef<HTMLDivElement>(null);
   const [showScroll, setShowScroll] = useState(true);
 
   const scrollToProjects = () => {
-    projectsRef.current?.scrollIntoView({ behavior: "smooth" });
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
   useEffect(() => {
@@ -17,15 +17,17 @@ export default function LandingPage() {
       setShowScroll(scrollY < 100);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#FAFAFA]">
       <Hero scrollToProjects={scrollToProjects} showScroll={showScroll} />
 
-      <Projects />
+      <div ref={projectsRef}>
+        <Projects />
+      </div>
 
       <Journey />
     </div>

@@ -1,15 +1,12 @@
-import { motion } from "framer-motion";
-import { timelineEvents } from "@/data/timelineData";
-import skyTileImage from "../../assets/sky_tile.png";
-import "./Journey.css";
+import { motion } from 'framer-motion';
+import { timelineEvents } from '@/data/timelineData';
+import skyTileImage from '../../assets/sky_tile.png';
+import './Journey.css';
 
 export default function Journey() {
   return (
     <section className="journey-section">
-      <div
-        className="sky-background"
-        style={{ backgroundImage: `url(${skyTileImage})` }}
-      />
+      <div className="sky-background" style={{ backgroundImage: `url(${skyTileImage})` }} />
       <div className="overlay" />
 
       <h2 className="journey-title">My Journey</h2>
@@ -23,7 +20,7 @@ export default function Journey() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
             viewport={{ once: true, amount: 0.3 }}
-            className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`}
+            className={`timeline-event ${index % 2 === 0 ? 'left' : 'right'}`}
           >
             <div className="dot" />
             <div className="date">{event.date}</div>

@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
-import landscape from "../../assets/landscape.png";
-import { ArrowDown } from "lucide-react";
+import { motion } from 'framer-motion';
+import landscape from '../../assets/landscape.png';
+import { ArrowDown } from 'lucide-react';
+import './Hero.css';
 
 interface HeroProps {
   scrollToProjects: () => void;
@@ -10,11 +11,7 @@ interface HeroProps {
 export default function Hero({ scrollToProjects, showScroll }: HeroProps) {
   return (
     <div className="w-full h-screen overflow-hidden relative bg-[#63B3F9]">
-      <img
-        src={landscape}
-        alt="landscape"
-        className="absolute w-full h-full object-cover"
-      />
+      <img src={landscape} alt="landscape" className="absolute w-full h-full object-cover" />
 
       <motion.div
         className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-[#7FC74D] to-transparent"
@@ -24,16 +21,16 @@ export default function Hero({ scrollToProjects, showScroll }: HeroProps) {
         transition={{
           duration: 5,
           repeat: Infinity,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         }}
-        style={{ mixBlendMode: "multiply" }}
+        style={{ mixBlendMode: 'multiply' }}
       />
 
       <motion.div
         className="absolute top-0 left-0 w-full h-full"
         animate={{ scaleX: [1, 1.01, 1, 0.99, 1] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        style={{ mixBlendMode: "soft-light" }}
+        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+        style={{ mixBlendMode: 'soft-light' }}
       />
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full pt-20">
@@ -58,10 +55,8 @@ export default function Hero({ scrollToProjects, showScroll }: HeroProps) {
               className="absolute bottom-12 left-1/2 transform -translate-x-1/2 cursor-pointer"
               onClick={scrollToProjects}
             >
-              <div className="flex flex-col items-center">
-                <p className="quicksand-font text-white mb-2">
-                  Scroll to explore
-                </p>
+              <div className="scroll-text flex flex-col items-center">
+                <p className="quicksand-font text-white">Scroll to explore</p>
                 <ArrowDown className="text-white" size={24} />
               </div>
             </motion.div>

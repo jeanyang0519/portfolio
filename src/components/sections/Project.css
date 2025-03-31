@@ -13,13 +13,13 @@
 }
 
 .project-title {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 4rem;
 }
 
 .projects-background {
@@ -42,11 +42,10 @@
 }
 
 .projects-content {
-    position: relative;
-    z-index: 2;
-    padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 2rem;
 }
-  
 
 @media screen and (min-width: 768px) {
   .projects-container {
@@ -123,18 +122,18 @@
 }
 
 .projects-heading {
-    text-align: center;
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 5.5rem;
-    letter-spacing: 0.05em;
-  }
-  
-  /* To avoid duplicate class name conflicts */
-  .project-title-card {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #2c6f50;
-    margin-bottom: 0.5rem;
-  }
-  
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 5.5rem;
+  letter-spacing: 0.05em;
+  opacity: 88%;
+}
+
+/* To avoid duplicate class name conflicts */
+.project-title-card {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2c6f50;
+  margin-bottom: 0.5rem;
+}
