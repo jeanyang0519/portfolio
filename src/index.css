@@ -44,7 +44,7 @@ body {
 }
 
 .animate-windBlow {
-  animation: windBlow 80s linear infinite;
+  animation: windBlow 40s linear infinite;
 }
 
 .float {
