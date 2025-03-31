@@ -1,48 +1,65 @@
-.journey-container {
+.journey-section {
     position: relative;
     min-height: 100vh;
+    padding: 6rem 1rem;
     overflow: hidden;
-    background: #63B3F9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 6rem;
+    background-color: #63B3F9;
   }
   
-  .clouds {
+  .sky-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 200%;
     height: 100%;
-    background-image: url("../../assets/sky_tile.png");
     background-repeat: repeat-x;
     background-size: auto 100%;
-    animation: moveClouds 60s linear infinite;
+    background-position: 0 0;
     z-index: 0;
+    /* opacity: 0.2; */
+    animation: windBlow 170s linear infinite;
   }
   
-  @keyframes moveClouds {
+  @keyframes scrollSky {
     from {
-      transform: translateX(0);
+      background-position-x: 0%;
     }
     to {
+      background-position-x: -100%;
+    }
+  }
+
+  @keyframes windBlow {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
       transform: translateX(-50%);
     }
   }
   
-  .journey-title {
-    font-family: "Quicksand", sans-serif;
-    font-size: 2.5rem;
-    color: white;
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(1px);
     z-index: 1;
-    margin-bottom: 3rem;
+  }
+  
+  .journey-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 4rem;
   }
   
   .timeline-line {
     position: absolute;
-    top: 120px;
-    bottom: 0;
+    top: 13rem;
+    bottom: 2rem;
     left: 50%;
     width: 4px;
     background: white;
@@ -50,98 +67,120 @@
     transform: translateX(-50%);
   }
   
-  .timeline-events {
+  .events-wrapper {
     position: relative;
     z-index: 2;
-    width: 100%;
-    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    max-width: 1000px;
     margin: 0 auto;
   }
   
-  .timeline-item {
+  .timeline-event {
     position: relative;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
-    margin-bottom: 5rem;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
   }
   
-  .timeline-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .timeline-item.left {
-    justify-content: flex-start;
-  }
-  
-  .dot {
-    position: absolute;
-    left: 50%;
-    width: 14px;
-    height: 14px;
-    background: white;
-    border-radius: 50%;
-    z-index: 3;
-    transform: translateX(-50%);
-  }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(4px);
-    padding: 1rem 1.5rem;
-    border-radius: 10px;
-    max-width: 350px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-  }
-  
-  .card-title {
-    font-family: "Quicksand", sans-serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #3C7A55;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card-desc {
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  .card-date {
-    position: absolute;
-    top: 0;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: white;
-    padding: 0.25rem 0.5rem;
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
-    border-radius: 5px;
-    white-space: nowrap;
-    z-index: 2;
-    transform: translateY(-50%);
-  }
-  
-  .date-left {
-    left: calc(50% - 60px); /* shift to left of dot */
-    text-align: right;
-  }
-  
-  .date-right {
-    left: calc(50% + 20px); /* shift to right of dot */
+  .timeline-event.left {
+    align-items: flex-start;
     text-align: left;
   }
   
-  /* Left/right alternation */
-  .timeline-item.left .card {
-    margin-left: 60px;
+  .timeline-event.right {
+    align-items: flex-end;
+    text-align: left;
   }
   
-  .timeline-item.right .card {
-    margin-right: 60px;
+  .timeline-event .dot {
+    position: absolute;
+    top: 0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1rem;
+    height: 1rem;
+    background: white;
+    border-radius: 50%;
+    z-index: 2;
   }
   
+  .timeline-event .date {
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .timeline-event.left .date {
+    margin-left: calc(37% + 1.2rem);
+  }
+  
+  .timeline-event.right .date {
+    margin-right: calc(37% + 1.2rem);
+  }
+  
+  .timeline-event .card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(4px);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 45%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+  
+  .timeline-event.left .card {
+    margin-left: 0;
+  }
+  
+  .timeline-event.right .card {
+    margin-right: 0;
+    align-self: flex-end;
+  }
+  
+  .card h3 {
+    margin: 0 0 0.5rem;
+    color: #3C7A55;
+    font-size: 1.2rem;
+  }
+  
+  .card p {
+    margin: 0;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  /* Mobile layout */
+  @media (max-width: 768px) {
+    .timeline-line {
+      left: 20px;
+      transform: none;
+    }
+  
+    .timeline-event {
+      align-items: flex-start !important;
+      text-align: left !important;
+    }
+  
+    .timeline-event .dot {
+      left: 20px;
+      transform: none;
+    }
+  
+    .timeline-event .date {
+      margin-left: 2.5rem;
+    }
+  
+    .timeline-event .card {
+      max-width: 85%;
+      margin-left: 2.5rem;
+    }
+  }

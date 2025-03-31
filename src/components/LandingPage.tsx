@@ -3,7 +3,6 @@ import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import Journey from "./sections/Journey";
 
-
 export default function LandingPage() {
   const projectsRef = useRef<HTMLDivElement>(null);
   const [showScroll, setShowScroll] = useState(true);
@@ -25,11 +24,10 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#FAFAFA]">
       <Hero scrollToProjects={scrollToProjects} showScroll={showScroll} />
-      
+
       <Projects />
-      
-      <Journey/>
-      
+
+      <Journey />
     </div>
   );
 }

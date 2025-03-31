@@ -1,10 +1,9 @@
 {
-    "variant": "tint",
-    "primary": "#87BFAF",
-    "accent": "#F9C3C3",
-    "secondary": "#A3BE8C",
-    "appearance": "light",
-    "radius": 1.5,
-    "title": "Calm Theme"
-  }
-  
+  "variant": "tint",
+  "primary": "#87BFAF",
+  "accent": "#F9C3C3",
+  "secondary": "#A3BE8C",
+  "appearance": "light",
+  "radius": 1.5,
+  "title": "Calm Theme"
+}

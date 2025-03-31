@@ -6,14 +6,11 @@ import { Toaster } from "./components/ui/toaster";
 import LandingPage from "./components/LandingPage";
 // import Projects from "./components/sections/Projects";
 
-
-
 function Router() {
   return (
     <Switch>
       <Route path="/" component={LandingPage} />
     </Switch>
-    
   );
 }
 
