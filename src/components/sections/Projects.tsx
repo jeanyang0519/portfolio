@@ -15,7 +15,9 @@ export default function Projects() {
       {/* Content Container */}
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Title */}
-        <h2 className="text-white text-4xl  text-center mb-12 font-semibold drop-shadow-lg">My Projects</h2>
+        <h2 className="text-white text-4xl  text-center mb-12 font-semibold drop-shadow-lg">
+          My Projects
+        </h2>
 
         {/* Projects Grid */}
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-40">
