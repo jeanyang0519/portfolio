@@ -55,7 +55,7 @@ export default function Hero({ scrollToProjects, showScroll }: HeroProps) {
               className="absolute bottom-12 left-1/2 transform -translate-x-1/2 cursor-pointer"
               onClick={scrollToProjects}
             >
-              <div className="scroll-text flex flex-col items-center">
+              <div className="flex flex-col items-center">
                 <p className="quicksand-font text-white">Scroll to explore</p>
                 <ArrowDown className="text-white" size={24} />
               </div>
