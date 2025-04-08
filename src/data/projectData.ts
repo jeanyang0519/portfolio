@@ -1,6 +1,7 @@
 import avocadoImg from '../assets/projects/avocado.png';
 import chairImg from '../assets/projects/chair.png';
 import lightbulbImg from '../assets/projects/lightbulb.png';
+import animeRecImg from '../assets/projects/animeRec.png'
 
 export const projectData = [
   {
@@ -34,7 +35,7 @@ export const projectData = [
       },
     ],
     liveUrl: 'https://jeanyang0519.github.io/Hello-Avocado/',
-    githubUrl: 'https://jeanyang0519.github.io/Hello-Avocado/',
+    githubUrl: 'https://github.com/jeanyang0519/Hello-Avocado',
   },
   {
     id: 'lifegram',
