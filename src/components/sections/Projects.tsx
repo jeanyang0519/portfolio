@@ -1,5 +1,6 @@
 import { projectData } from '@/data/projectData';
 import oceanImage from '../../assets/ocean.png';
+import newBadge from '../../assets/new.png';
 import { motion } from 'framer-motion';
 
 export default function Projects() {
@@ -20,16 +21,20 @@ export default function Projects() {
         </h2>
 
         {/* Projects Grid */}
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-40">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-20">
           {projectData.map((project, index) => (
             <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/70 hover:bg-white/90 rounded-xl shadow-lg p-6 flex flex-col justify-between"
-            >
+            key={project.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="relative bg-white/70 hover:bg-white/90 rounded-xl shadow-lg p-6 flex flex-col justify-between"
+          >
+              {/* New Badge */}
+              {project.id === 'anime-rec' && (
+                <img src={newBadge} alt="New Badge" className="absolute top-2 right-4 w-15 h-15" />
+              )}
               <img
                 src={project.imageSrc}
                 alt={project.title}

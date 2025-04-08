@@ -1,9 +1,53 @@
 import avocadoImg from '../assets/projects/avocado.png';
 import chairImg from '../assets/projects/chair.png';
 import lightbulbImg from '../assets/projects/lightbulb.png';
-import animeRecImg from '../assets/projects/animeRec.png'
+import animeRecImg from '../assets/projects/animeRec.png';
 
 export const projectData = [
+  {
+    id: 'anime-rec',
+    title: 'Anime Rec',
+    imageSrc: animeRecImg,
+    shortDescription:
+      'A full-stack anime recommendation platform using Next.js, TypeScript, and AniList API to personalize discovery through quizzes, random picks, and curated lists.',
+    description:
+      'Anime Rec is a full-stack web application that helps users explore anime recommendations based on personal vibes, quiz responses, or curated favorites. It offers a mix of randomized and personalized discovery experiences while connecting to the AniList API for live data.',
+    challenge:
+      'Creating an intuitive, responsive recommendation flow that blends quiz logic with live API integration, all while keeping performance optimized for dynamic routes and server-side rendering.',
+    solution:
+      'I built a scalable and modular architecture with Next.js App Router, custom API routes, and dynamic client-side filtering. Tailwind CSS and Framer Motion were used to create playful, fluid UI interactions. The project is deployed with CI/CD via Vercel.',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind CSS',
+      'React',
+      'AniList API',
+      'GraphQL',
+      'Vercel',
+      'CI/CD',
+    ],
+    features: [
+      'Quiz-based personalized anime recommendations',
+      'Random pick generator powered by AniList API',
+      'Jean’s elite anime list with filters and tiering',
+      'Expandable descriptions with fade effects',
+      'Responsive design and modular components',
+      'Deployment via GitHub + Vercel CI/CD',
+    ],
+    images: [
+      {
+        alt: 'Anime Rec Home',
+        caption: 'Homepage with quiz, random pick, and curated list options',
+      },
+      {
+        alt: 'Quiz Result Cards',
+        caption: 'Personalized results with descriptions and artwork',
+      },
+    ],
+    liveUrl: 'https://anime-rec.com',
+    githubUrl: 'https://github.com/jeanyang0519/anime-recommender',
+  },
+
   {
     id: 'hello-avocado',
     title: 'Hello Avocado',
@@ -123,47 +167,4 @@ export const projectData = [
     ],
     githubUrl: 'https://github.com/jeanyang0519/Light-Up',
   },
-  {
-    id: 'anime-rec',
-    title: 'Anime Rec',
-    imageSrc: animeRecImg,
-    shortDescription:
-      'A full-stack anime recommendation platform using Next.js, TypeScript, and AniList API to personalize discovery through quizzes, random picks, and curated lists.',
-    description:
-      'Anime Rec is a full-stack web application that helps users explore anime recommendations based on personal vibes, quiz responses, or curated favorites. It offers a mix of randomized and personalized discovery experiences while connecting to the AniList API for live data.',
-    challenge:
-      'Creating an intuitive, responsive recommendation flow that blends quiz logic with live API integration, all while keeping performance optimized for dynamic routes and server-side rendering.',
-    solution:
-      'I built a scalable and modular architecture with Next.js App Router, custom API routes, and dynamic client-side filtering. Tailwind CSS and Framer Motion were used to create playful, fluid UI interactions. The project is deployed with CI/CD via Vercel.',
-    technologies: [
-      'Next.js',
-      'TypeScript',
-      'Tailwind CSS',
-      'React',
-      'AniList API',
-      'GraphQL',
-      'Vercel',
-      'CI/CD',
-    ],
-    features: [
-      'Quiz-based personalized anime recommendations',
-      'Random pick generator powered by AniList API',
-      'Jean’s elite anime list with filters and tiering',
-      'Expandable descriptions with fade effects',
-      'Responsive design and modular components',
-      'Deployment via GitHub + Vercel CI/CD',
-    ],
-    images: [
-      {
-        alt: 'Anime Rec Home',
-        caption: 'Homepage with quiz, random pick, and curated list options',
-      },
-      {
-        alt: 'Quiz Result Cards',
-        caption: 'Personalized results with descriptions and artwork',
-      },
-    ],
-    liveUrl: 'https://anime-rec.com',
-    githubUrl: 'https://github.com/jeanyang0519/anime-recommender',
-  }
 ];
